@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせ - 林香果樹園</title>
+  <link rel="icon" href="favicon.svg" type="image/png">
+  <link rel="apple-touch-icon" href="favicon.svg">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <!-- footerFixed -->
+  <script src="js/footerFixed.js"></script>
+  <!-- jQueryの読み込み -->
+  <script src="js/jquery-3.7.1.min.js"></script>
+</head>
+
+<body id="top">
+  <header>
+    <div class="container">
+      <h1><a href="index.html"><img src="img/common/icon.svg" alt="林香果樹園のアイコン"></a></h1>
+      <!-- モバイル時のオンラインショップボタン -->
+      <p class="onlineshopbtn"><a href="/"></a></p>
+      <!-- ハンバーガーメニュー -->
+      <button class="hmenu"><span></span></button>
+      <nav>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="about.html">果樹園について</a></li>
+          <li><a href="shop.html">商品案内</a></li>
+          <li class="active"><a href="contact.html">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <div class="titleh2">
+        <h2>お問い合わせ</h2>
+      </div>
+      <div class="contact">
+        <aside>
+          <p>WEBからのお問い合わせは下記入力フォームに<br>必要事項をご記入のうえ、「送信」ボタンをクリックしてください。<br>
+            <span class="red">※繁忙期は返信が遅くなる場合がございます。</span>
+          </p>
+          <p>お急ぎのご用件やご不明点があれば、<br>下記連絡先までお問い合わせください。</p>
+          <p class="tel">お電話番号&#xFF1A;8xx-88x-888x</p>
+          <p class="teltime">電話お問い合わせ受付時間 / 9:00~18:00</p>
+        </aside>
+        <form action="https://ssl.form-mailer.jp/fm/service/Forms/complete" method="post" name="form1" enctype="multipart/form-data" accept-charset="UTF-8">
+          <input type="hidden" name="key" value="72fe07fe837266">
+          <dl>
+            <div>
+              <dt>お名前<span class="red">*</span></dt>
+              <dd><input type="text" name="field_7322048" placeholder="山田 太郎" required></dd>
+            </div>
+            <div>
+              <dt>メールアドレス<span class="red">*</span></dt>
+              <dd><input type="email" name="field_7322041" placeholder="kazyuenn@example.com" required></dd>
+            </div>
+            <div>
+              <dt>電話番号</dt>
+              <dd><input type="tel" name="field_7322049" placeholder="012-3456-7890（任意）"></dd>
+            </div>
+            <div>
+              <dt>注文番号</dt>
+              <dd><input type="text" name="field_7322047"></dd>
+            </div>
+            <div>
+              <dt>お問い合わせ内容</dt>
+              <dd><textarea name="field_7322050"></textarea></dd>
+            </div>
+          </dl>
+          <p><button>送信</button></p>
+          <input type="hidden" name="code" value="utf8">
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer id="footer">
+    <div class="container">
+      <div>
+        <p class="shopname">林香果樹園</p>
+        <address>
+          <p>〒020-xx88<br>岩手県盛岡市xx町8-xx</p>
+          <p>電話番号&#xFF1A;8xx-88x-888x</p>
+        </address>
+      </div>
+      <div><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6141.302935852161!2d141.1757307586981!3d39.68005405310962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f859da155ab1219%3A0x3462b9b96b6b3b6a!2z44CSMDIwLTA4MjQg5bKp5omL55yM55ub5bKh5biC5p2x5a6J5bqt5aa744Kx5qOu!5e0!3m2!1sja!2sjp!4v1728018859779!5m2!1sja!2sjp" width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    </div>
+    <p class="pagetop"><a href="#top"><img src="img/common/pagetop.svg" width="50" height="50" alt="ページトップへ"></a>
+    </p>
+    <p class="copyright"><small>&copy;2024 kazyuu.rinka</small></p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

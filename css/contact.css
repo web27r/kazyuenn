@@ -1,0 +1,162 @@
+@import url(common.css);
+
+main {
+  padding-bottom: 50px;
+  background-image: url(../img/contactpage/background.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  font-weight: bold;
+}
+
+main div.container {
+  padding: 42px 0;
+  border-bottom: 3px solid #689967;
+}
+
+main h2 {
+  padding: 12px 15px;
+  background-color: #689967;
+}
+
+main div.titleh2 {
+  margin-bottom: 30px;
+}
+
+/* 文字横のボーダー設定 */
+main div.titleh2::before,
+main div.titleh2::after {
+  border-top: 3px solid #689967;
+}
+
+main div.contact {
+  padding: 60px 0;
+  background-color: #f9f8f4;
+  border-radius: 50px;
+}
+
+main div.contact aside {
+  margin-bottom: 70px;
+}
+
+main div.contact aside p {
+  padding-bottom: 10px;
+  font-size: 20px;
+  line-height: 29px;
+  letter-spacing: 2px;
+}
+
+main div.contact aside p.tel {
+  font-size: 22px;
+}
+
+main div.contact aside p.teltime {
+  text-decoration: underline;
+}
+
+/* フォーム */
+main form dl {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main form dl div {
+  margin-bottom: 56px;
+}
+
+main dl div dt {
+  padding-left: 20px;
+  padding-bottom: 5px;
+  text-align: left;
+  color: #689967;
+  font-size: 20px;
+}
+
+main input[type="text"],
+main input[type="email"],
+main input[type="tel"],
+main textarea {
+  width: 100%;
+  height: 54px;
+  border: 3px solid #689967;
+  border-radius: 50px;
+}
+
+main textarea {
+  padding: 20px;
+  height: 250px;
+  resize: vertical;
+}
+
+main dd input[placeholder] {
+  padding-left: 20px;
+}
+
+/* フォームボタン */
+main form p button {
+  padding: 10px 28px;
+  color: #fff;
+  font-size: 20px;
+  letter-spacing: 2.5px;
+  background-color: #528851;
+  border: none;
+}
+
+main form p button:hover {
+  opacity: 0.7;
+  transition-duration: 0.8s;
+}
+
+/* レスポンシブ */
+/* -----タブレット----- */
+@media (max-width: 991px) {
+  main {
+    padding-bottom: unset;
+  }
+
+  main div.contact {
+    margin: 0 20px;
+  }
+
+  main div.contact aside p {
+    font-size: unset;
+  }
+}
+
+/* -----スマホ----- */
+@media (max-width: 767px) {
+  main {
+    background-image: url(../img/contactpage/backgroundiphonecontact.png);
+  }
+
+  main div.contact {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  main div.contact aside {
+    padding: 0 10px;
+    margin-bottom: 30px;
+  }
+
+  main div.contact aside p {
+    text-align: left;
+  }
+
+  main br {
+    display: none;
+  }
+
+  main div.contact aside p.tel {
+    font-size: 20px;
+  }
+
+  main div.contact aside p.teltime {
+    font-size: 15px;
+    letter-spacing: unset;
+  }
+
+  main dl div dt {
+    font-size: unset;
+  }
+}

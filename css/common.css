@@ -1,0 +1,449 @@
+@import url("https://fonts.googleapis.com/css2?family=Murecho:wght@400&display=swap");
+
+/* デフォルト */
+body {
+  text-align: center;
+  color: #333;
+  font-family: "Yu Gothic Medium", YuGothic, sans-serif;
+}
+
+/* コンテナ幅 */
+div.container {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+span.red {
+  color: #d65c5c;
+}
+
+h2 {
+  font-size: 28px;
+  color: #fff;
+  font-family: "Murecho", sans-serif;
+}
+
+/* タイトルh2の文字横のボーダー設定 */
+main div.titleh2 {
+  display: flex;
+  white-space: nowrap;
+}
+
+main div.titleh2::before,
+main div.titleh2::after {
+  border-top: 3px solid #689967;
+  content: "";
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 100%;
+}
+
+.active {
+  font-weight: bold;
+}
+
+:root {
+  scroll-behavior: smooth;
+}
+
+/* -----ヘッダー----- */
+header {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: #fff;
+  opacity: 0.95;
+}
+
+header div.container {
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+}
+
+/* モバイル時のハンバーガーメニューアイコン */
+.hmenu {
+  width: 55px;
+  height: 55px;
+  border: none;
+  border-radius: 50px;
+  background-color: #ffc8c8;
+  /* PC上では非表示設定だから、モバイル時の方でdisplay:flexにして表示する */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 30px;
+  z-index: 1001;
+}
+
+.hmenu span,
+.hmenu span::before,
+.hmenu span::after {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
+  display: block;
+  /* 絶対配置で3本線が重なるから、上と下の2本は個別で設定する */
+  position: absolute;
+  transition: 0.5s;
+}
+
+.hmenu span::before {
+  content: "";
+  bottom: 9px;
+}
+
+.hmenu span::after {
+  content: "";
+  top: 9px;
+}
+
+.hmenu.open {
+  background-color: #f69595;
+}
+
+.hmenu.open span {
+  background-color: unset;
+}
+
+/* 下:0, 回転:-135° */
+.hmenu.open span::before {
+  bottom: 0;
+  transform: rotate(-135deg);
+}
+
+/* 上:0, 回転:135° */
+.hmenu.open span::after {
+  top: 0;
+  transform: rotate(135deg);
+}
+
+/* モバイル時のオンラインショップボタン */
+.onlineshopbtn {
+  width: 55px;
+  height: 55px;
+  border: none;
+  border-radius: 50px;
+  background-color: #ca6161;
+  /* pc時は非表示 */
+  display: none;
+  align-items: center;
+  background-image: url(../img/common/onlineshopbtn.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  right: 100px;
+  z-index: 1001;
+}
+
+/* ヘッダーメニュー設定 */
+header nav ul {
+  gap: 31px 36px;
+  display: flex;
+}
+
+header ul li a {
+  padding: 10px 30px;
+  font-size: 18px;
+  font-weight: normal;
+  color: #fff;
+  background-color: #4a7849;
+  border-radius: 26px;
+  text-decoration: none;
+}
+
+header nav li a:hover {
+  background-color: #7abd78;
+  transition-duration: 0.8s;
+}
+
+/* クラスlink（ボタン） */
+main p.link a {
+  padding: 22px 60px 22px 60px;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50px;
+  border: 1px solid #689967;
+  background-image: url(../img/common/rightarrow.svg);
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  display: block;
+  font-size: 20px;
+  color: #689967;
+  font-weight: lighter;
+  text-decoration: none;
+}
+
+main p.link a:hover {
+  transition-duration: 0.8s;
+  color: #fff;
+  background-color: #689967;
+  background-image: url(../img/common/rightarrowwhite.svg);
+}
+
+/* ---クラスshopbtn--- */
+main div.shopbtn {
+  position: fixed;
+  top: 500px;
+  right: 0;
+  z-index: 1;
+}
+
+main div.shopbtn p {
+  font-weight: bold;
+}
+
+main div.shopbtn p.yellow {
+  margin-bottom: 20px;
+  color: #ffff00;
+  font-size: 25px;
+}
+
+main div.shopbtn p.onlineshop {
+  padding-top: 20px;
+  font-size: 18px;
+  line-height: 25px;
+  color: #fff;
+}
+
+main div.shopbtn div {
+  height: 300px;
+  padding: 35px 15px;
+  background-image: url(../img/common/rightarrowwhite.svg);
+  background-repeat: no-repeat;
+  background-size: 30px;
+  background-position: 90% 96%;
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+  background-color: #ca6161;
+}
+
+/* -----フッター----- */
+footer {
+  margin-top: 45px;
+  padding-top: 17px;
+  background-image: url(../img/toppage/farm.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 465px;
+}
+
+footer div.container {
+  padding: 10px;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+footer div.container div:first-child {
+  text-align: left;
+}
+
+footer div.container p.shopname {
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+footer div.container address {
+  margin-bottom: 17px;
+  font-size: 20px;
+  line-height: normal;
+}
+
+footer p.copyright {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+}
+
+/* ページトップボタン */
+footer p.pagetop {
+  position: fixed;
+  right: 15px;
+  bottom: 10px;
+  /* スクロールして表示するように始めは非表示にする */
+  display: none;
+}
+
+footer p.pagetop a:hover {
+  opacity: 0.7;
+}
+
+/* レスポンシブ */
+/* -----タブレット----- */
+@media (max-width: 991px) {
+  header {
+    opacity: unset;
+    position: relative;
+  }
+
+  header h1 img {
+    padding-left: 20px;
+  }
+
+  /* オンラインショップボタン */
+  .onlineshopbtn {
+    display: flex;
+  }
+
+  /* ハンバーガーメニュー表示（FlexBox）*/
+  .hmenu {
+    display: flex;
+  }
+
+  /* 左右スライドのハンバーガーメニューのnavデザイン設定 */
+  header nav {
+    width: 0;
+    margin-top: unset;
+    padding-top: 90px;
+    padding-bottom: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #ffffff;
+    z-index: 1000;
+    border-bottom-left-radius: 50px;
+    border: none;
+    transition: 0.5s;
+    overflow-x: hidden;
+  }
+
+  .hmenu.open + nav {
+    width: 230px;
+  }
+
+  header nav ul {
+    width: 230px;
+    display: block;
+  }
+
+  header nav li {
+    padding: 30px 0;
+  }
+
+  header ul li a {
+    padding: unset;
+    font-size: 25px;
+    color: #4a7849;
+    font-weight: bold;
+    background-color: unset;
+    border-radius: unset;
+  }
+
+  header nav li a:hover {
+    background-color: unset;
+    transition-duration: none;
+    text-decoration: underline;
+    opacity: 0.7;
+  }
+
+  main div.shopbtn {
+    display: none;
+  }
+
+  footer iframe {
+    max-width: 300px;
+    height: 250px;
+  }
+
+  /* 上下スライドのハンバーガーメニューのnavデザイン設定 */
+  /* header nav {
+    padding-top: 112px;
+    margin-top: unset;
+    position: fixed;
+    top: -100%;
+    ハンバーガーがクリックされる前はWindow上部に隠す
+    right: 0;
+    z-index: 1000;
+    transition: 0.5s;
+    border-bottom-left-radius: 50px;
+    background-color: #fefded;
+  }
+
+  header nav ul {
+    gap: unset;
+    display: block;
+  }
+
+  header ul li {
+    padding: 0 30px 50px 30px;
+    display: block;
+  }
+
+  header ul li a {
+    padding: unset;
+    font-size: 25px;
+    font-family: "Murecho", sans-serif;
+    color: #4a7849;
+    background-color: unset;
+    border-radius: unset;
+  }
+
+  header nav li a:hover {
+    background-color: unset;
+    transition-duration: unset;
+  } */
+}
+
+/* -----スマホ----- */
+@media (max-width: 767px) {
+  /* ヘッダーのSticky解除 */
+  header {
+    position: unset;
+  }
+
+  .hmenu {
+    top: 10px;
+  }
+
+  .onlineshopbtn {
+    top: 10px;
+  }
+
+  header h1 img {
+    max-width: 150px;
+  }
+
+  main h2 {
+    font-size: 20px;
+    font-weight: lighter;
+  }
+
+  /* クラスlink（ボタン） */
+  main p.link a {
+    padding: 20px 50px 20px 50px;
+    background-size: 15px;
+    font-size: 15px;
+  }
+
+  /* ショッピングガイド */
+  main p.guide {
+    background-image: url(../img/common/backgroundiphoneguid.png);
+  }
+
+  footer div.container {
+    display: block;
+  }
+
+  footer div.container div:first-child {
+    text-align: center;
+  }
+}

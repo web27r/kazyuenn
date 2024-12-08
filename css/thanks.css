@@ -1,0 +1,59 @@
+@import url(common.css);
+
+main {
+  margin-top: 50px;
+  background-image: url(../img/thankspage/backgroundthanks.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+main div.container {
+  margin-bottom: 20px;
+  padding-bottom: 50px;
+  border-bottom: 6px double #689967;
+}
+
+main article h2.send {
+  padding-bottom: 20px;
+  margin-bottom: 50px;
+  color: #689967;
+  border-bottom: 6px double #689967;
+}
+
+main article p {
+  padding-bottom: 30px;
+  font-size: 20px;
+  line-height: 40px;
+}
+
+main p.homebtn {
+  width: fit-content;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 20px 30px;
+  border-radius: 50px;
+  background-color: #4a7849;
+  color: #fff;
+}
+
+/* レスポンシブ */
+/* -----タブレット----- */
+@media (max-width: 991px) {
+  main {
+    background-image: url(../img/thankspage/backgroundipad.png);
+  }
+}
+
+@media (max-width: 767px) {
+  main {
+    background-image: url(../img/thankspage/backgroundiphonethanks.png);
+  }
+
+  main article p {
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: left;
+    font-size: 18px;
+    line-height: 30px;
+  }
+}

@@ -1,0 +1,301 @@
+@import url(common.css);
+
+/* クラスshopinfo */
+main div.shopinfo {
+  padding: 40px 0 50px 0;
+  background-image: url(../img/shoppage/background1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+main div.titleh2 h2 {
+  padding: 12px 18px;
+  background-color: #689967;
+  letter-spacing: 5px;
+}
+
+main div.shopinfo div.titleh2 {
+  margin-bottom: 41px;
+}
+
+main div.titleh2::before,
+main div.titleh2::after {
+  border-top: 3px solid #689967;
+}
+
+main div.shopinfo div.shopitem2 {
+  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 150px;
+  justify-content: center;
+}
+
+main div.shopinfo div p {
+  font-size: 20px;
+  line-height: 35px;
+}
+
+main div.shopinfo span.backcolor {
+  padding: 5px;
+  background-color: #ffecec;
+}
+
+main div.shopinfo div img {
+  margin-bottom: 37px;
+}
+
+/* クラスlink3（ボタン） */
+main p.link3 a {
+  padding: 15px 55px 15px 50px;
+}
+
+/* クラスfurittype */
+main div.furittype {
+  background-image: url(../img/shoppage/background2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+main div.furittype div.container {
+  padding-bottom: 75px;
+  border-bottom: 3px solid #689967;
+}
+
+main div.furittype div.appletypes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 62px;
+}
+
+main div.furittype div.titleh2 {
+  margin-bottom: 60px;
+}
+
+main div.furittype div.titleh2 h2 {
+  padding: 12px 15px;
+}
+
+/* りんご品種 */
+main div.furittype figure {
+  width: 40%;
+  padding: 20px 22px;
+  background-color: #f9f8f4;
+  /* マウスオーバーで拡大設定 */
+  display: block;
+  transition-duration: 0.5s;
+}
+
+/* マウスオーバーで拡大設定 */
+main div.furittype div.appletypes figure:hover {
+  transform: scale(1.2, 1.2);
+  transition-duration: 0.5s;
+}
+
+main div.furittype div.appletypes {
+  overflow: visible;
+  width: 100%;
+  height: 100%;
+}
+
+main div.furittype figure h3 {
+  width: fit-content;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 15px;
+  padding: 6px 15px;
+  border-radius: 15px;
+  font-size: 25px;
+  font-family: "Murecho", sans-serif;
+  font-weight: bold;
+  background-color: #fff;
+  border: 1px solid #d65c5c;
+}
+
+main div.furittype figure.green h3 {
+  color: #689967;
+  border: 1px solid #689967;
+}
+
+main div.furittype img {
+  margin-bottom: 15px;
+}
+
+main div.furittype figure figcaption {
+  text-align: left;
+  line-height: normal;
+  font-size: 18px;
+}
+
+/* クラスaboutapple */
+main div.aboutapple {
+  margin: 85px 0;
+  background-image: url(../img/shoppage/background3.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+main div.aboutapple p {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main div.aboutapple div {
+  display: flex;
+  column-gap: 33px;
+  justify-content: center;
+}
+
+main div.aboutapple section h2 {
+  margin-top: 40px;
+  color: #d65c5c;
+}
+
+main div.aboutapple section h2::after {
+  content: "";
+  display: block;
+  background-color: #d65c5c;
+  height: 1px;
+  max-width: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  border-radius: 2px;
+}
+
+main div.aboutapple section p {
+  margin-top: 10px;
+  text-align: left;
+  line-height: 35px;
+  font-size: 20px;
+}
+
+/* レスポンシブ */
+/* -----タブレット----- */
+@media (max-width: 991px) {
+  main div.shopinfo {
+    background-image: url(../img/shoppage/backgroundipad1shop.png);
+  }
+
+  main div.shopinfo div.shopitem2 {
+    column-gap: 80px;
+  }
+
+  main div.shopinfo div p {
+    font-size: 18px;
+  }
+
+  main div.shopinfo div img {
+    margin-bottom: 20px;
+  }
+
+  /* りんご品種 */
+  main div.furittype div.appletypes {
+    gap: 30px;
+  }
+
+  main div.furittype figure {
+    width: 45%;
+  }
+
+  main div.furittype img {
+    width: 90%;
+  }
+
+  /* マウスオーバーで拡大の設定を外す */
+  main div.furittype div.appletypes figure:hover {
+    transform: unset;
+    transition-duration: unset;
+  }
+
+  main div.aboutapple {
+    margin: 50px 0;
+    background-image: url(../img/shoppage/backgroundipad3.png);
+  }
+
+  main div.aboutapple div {
+    display: block;
+  }
+
+  main div.aboutapple img {
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50px;
+  }
+}
+
+/* -----スマホ----- */
+@media (max-width: 767px) {
+  /* クラスshopinfo */
+  main div.shopinfo {
+    padding: 42px 0;
+    background-image: url(../img/shoppage/backgroundiphone1.png);
+  }
+
+  main div.shopinfo div.shopitem2 {
+    display: block;
+    flex-wrap: nowrap;
+    margin-bottom: unset;
+  }
+
+  main div.shopinfo div.shopitem2 img {
+    width: 75%;
+    margin-bottom: 10px;
+  }
+
+  main div.shopinfo div.shopitem2 p:nth-child(even) {
+    margin-bottom: 50px;
+  }
+
+  /* りんご品種 */
+  main div.furittype div.container {
+    padding-bottom: 50px;
+  }
+
+  main div.furittype div.titleh2 {
+    margin-bottom: 50px;
+  }
+
+  main div.furittype div.appletypes {
+    display: block;
+    flex-wrap: nowrap;
+  }
+
+  main div.furittype figure {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+
+  main div.furittype figure:last-child {
+    margin-bottom: unset;
+  }
+
+  main div.furittype img {
+    width: 80%;
+  }
+
+  main div.aboutapple {
+    background-image: url(../img/shoppage/backgroundiphone3.png);
+  }
+
+  main div.aboutapple section h2 {
+    font-size: 20px;
+  }
+
+  main div.aboutapple img {
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  main div.aboutapple section p {
+    padding: 0 20px;
+    line-height: 35px;
+    font-size: 18px;
+  }
+}

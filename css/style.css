@@ -1,0 +1,300 @@
+@import url(common.css);
+
+div.imgslider {
+  max-width: 1840px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* -----メイン----- */
+/* ---クラスabout--- */
+main div.about {
+  background-image: url(../img/toppage/backgroundimg1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+main div.about div.container {
+  position: relative;
+  background-image: url(../img/toppage/rightarrow.svg), url(../img/toppage/rightarrow.svg);
+  background-repeat: no-repeat;
+  background-size: 68px;
+  background-position: left 320px top 229px, right 310px top 229px;
+}
+
+main div.about div.aboutimg {
+  display: flex;
+  justify-content: space-between;
+}
+
+main div.aboutimg p {
+  margin-top: 141px;
+  margin-bottom: 90px;
+}
+
+/* クラスabout1 */
+main div.about div.container div.about1 {
+  position: absolute;
+  top: 15px;
+  left: 150px;
+  text-align: center;
+}
+
+main div.about div.about1 p {
+  letter-spacing: 3px;
+  padding: 6px 0px;
+  display: inline;
+  font-size: 20px;
+  line-height: 50px;
+  background-color: #e0e5b6;
+}
+
+/* クラスabout2 */
+main div.about p.about2 {
+  padding: 8px 0px;
+  position: absolute;
+  right: 175px;
+  top: 365px;
+  display: inline;
+  line-height: 25px;
+  letter-spacing: 2px;
+  font-size: 20px;
+  background-color: #e0e5b6;
+}
+
+/* ---クラスshop--- */
+main div.shop {
+  background-image: url(../img/toppage/backgroundimg2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+main h2 {
+  padding: 12px 15px;
+  background-color: #689967;
+}
+
+/* 商品画像配置 */
+main div.shop div.container {
+  margin-top: 50px;
+}
+
+main div.shop div.shopitem {
+  padding-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+main div.shopitem figure {
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: -5px 5px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+main div.shopitem div.overflowbig {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  overflow: hidden;
+}
+
+main div.shopitem figure img {
+  transition: 1s all;
+}
+
+main div.shopitem figure img:hover {
+  transform: scale(1.2, 1.2);
+  transition: 1s all;
+}
+
+main div.shop div.shopitem figcaption {
+  margin-bottom: 39px;
+  margin-top: 30px;
+  font-size: 35px;
+  font-family: "Murecho", sans-serif;
+}
+
+main div.shopitem figcaption.applecolor {
+  color: #ee6868;
+}
+
+main div.shopitem figcaption.pearcolor {
+  color: #689967;
+}
+
+main div.shopitem figcaption.juicecolor {
+  color: #f69595;
+}
+
+/* クラスlink2（ボタン） */
+main p.link2 a {
+  padding: 22px 50px 22px 50px;
+  margin-top: 70px;
+  margin-bottom: 70px;
+  letter-spacing: 15px;
+}
+
+/* ---クラスnews--- */
+main div.news {
+  background-image: url(../img/toppage/backgroundimg3.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+main div.news div.container {
+  border-bottom: 3px solid #689967;
+}
+
+main div.news dl {
+  margin: 19px 0 45px 0;
+  padding: 30px;
+  background-color: #f9f8f4;
+  border-radius: 50px;
+  line-height: normal;
+}
+
+main div.news dl div {
+  text-align: left;
+}
+
+main div.news dl div:first-child {
+  margin-bottom: 30px;
+}
+
+main div.news div dt {
+  font-size: 30px;
+}
+
+main div.news div dd {
+  font-size: 25px;
+}
+
+/* レスポンシブ */
+/* -----タブレット----- */
+@media (max-width: 991px) {
+  div.imgslider {
+    padding: 0 20px;
+  }
+
+  div.imgslider ul.slider img {
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50px;
+  }
+
+  main div.about div.aboutimg {
+    padding: 0 20px;
+  }
+
+  /* ---クラスshop--- */
+  main div.shop div.shopitem {
+    padding-left: 20px;
+    padding-right: 20px;
+    row-gap: 30px;
+  }
+
+  main div.shopitem figure {
+    max-width: 496px;
+  }
+
+  /* 矢印非表示 */
+  main div.about div.container {
+    background-image: none;
+  }
+
+  /* クラスabout1 */
+  main div.about div.container div.about1 {
+    position: absolute;
+    top: 14px;
+    left: 20px;
+    text-align: left;
+  }
+
+  /* クラスabout2 */
+  main div.about p.about2 {
+    position: absolute;
+    top: 380px;
+    right: 20px;
+  }
+
+  main div.news dl {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+/* -----スマホ----- */
+@media (max-width: 767px) {
+  div.imgslider ul.slider img {
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50px;
+  }
+
+  /* ---クラスabout--- */
+  main div.about {
+    background-image: url(../img/toppage/background1phone.png);
+  }
+
+  /* クラスabout1 */
+  main div.about div.container div.about1 {
+    position: absolute;
+    top: 30px;
+  }
+
+  main div.about div.about1 p {
+    padding: 5px 0px;
+    font-size: 13px;
+    line-height: 34px;
+  }
+
+  /* クラスabout2 */
+  main div.about p.about2 {
+    position: absolute;
+    top: 265px;
+    padding: 5px 0px;
+    font-size: 13px;
+  }
+
+  /* ---クラスshop--- */
+  main div.shop {
+    background-image: url(../img/toppage/backgroundiphoneichiran.png);
+  }
+
+  main div.shop div.shopitem {
+    padding-left: unset;
+    padding-right: unset;
+    row-gap: 10px;
+  }
+
+  main div.shopitem figure img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    height: 181px;
+  }
+
+  main div.shop div.shopitem figcaption {
+    margin-bottom: 14px;
+    margin-top: 14px;
+    font-size: 11px;
+  }
+
+  /* クラスlink2（ボタン） */
+  main p.link2 a {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 20px 50px 20px 50px;
+    letter-spacing: 10px;
+    font-size: 18px;
+  }
+
+  main div.news div dt {
+    font-size: 20px;
+  }
+
+  main div.news div dd {
+    font-size: 18px;
+  }
+}

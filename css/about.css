@@ -1,0 +1,169 @@
+@import url(common.css);
+
+p.aboutvisual {
+  background-image: url(../img/aboutpage/backgroundmain.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* -----メイン----- */
+main {
+  padding-top: 100px;
+}
+
+main div.history {
+  padding-top: 100px;
+}
+
+/* スクロールすると、下からふわっと出現する設定 */
+main div.history section.on {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+main div.history section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  column-gap: 50px;
+  padding-bottom: 145px;
+  /* スクロールすると、下からふわっと出現する設定 */
+  transition: 1.5s ease-in-out;
+  transform: translateY(50px);
+  opacity: 0;
+}
+
+main div.history section:first-child {
+  background-image: url(../img/aboutpage/background1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+main div.history section:nth-child(even) {
+  background-image: url(../img/aboutpage/background2.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+main div.history section:last-child {
+  background-image: url(../img/aboutpage/background3.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+main div.history h2 {
+  color: #d65c5c;
+}
+
+main div.history h2::after {
+  content: "";
+  display: block;
+  background-color: #d65c5c;
+  height: 1px;
+  max-width: 80px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  border-radius: 2px;
+}
+
+main div.history p {
+  max-width: 580px;
+  margin-top: 20px;
+  font-size: 20px;
+  line-height: 38px;
+  text-align: center;
+}
+
+/* レスポンシブ */
+/* -----タブレット----- */
+@media (max-width: 991px) {
+
+  /* メイン画像 */
+  p.aboutvisual {
+    padding: 0 20px;
+  }
+
+  main {
+    padding-top: 100px;
+    background-image: url(../img/aboutpage/backgroundiPad.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  main div.history section {
+    padding-bottom: 30px;
+  }
+
+  main div.history section:nth-child(even) {
+    background-image: unset;
+  }
+
+  main div.history section:first-child,
+  main div.history section:last-child {
+    flex-direction: column-reverse;
+    background-image: unset;
+  }
+
+  main div.history section:nth-child(2) {
+    flex-direction: column;
+  }
+
+  main div.history section p {
+    margin-bottom: 50px;
+  }
+
+  main div.history img {
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50px;
+  }
+
+  span.textright {
+    text-align: right;
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+
+  /* メイン画像 */
+  p.aboutvisual img {
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50px;
+  }
+
+  main {
+    padding-top: 40px;
+    background-image: url(../img/aboutpage/backgroundiphone.png);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  main h1 img {
+    max-width: 300px;
+  }
+
+  main div.history {
+    padding: 40px 20px 0 20px;
+  }
+
+  main div.history h2 {
+    max-width: unset;
+    font-size: 20px;
+  }
+
+  main div.history p {
+    text-align: left;
+    font-size: 18px;
+    line-height: 36px;
+  }
+
+  main div.history img {
+    height: 250px;
+  }
+}
