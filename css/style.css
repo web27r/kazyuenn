@@ -58,7 +58,7 @@ main div.about p.about2 {
   display: inline;
   line-height: 25px;
   letter-spacing: 2px;
-  font-size: 20px;
+  font-size: max(1vw, 13px);
   background-color: #e0e5b6;
 }
 
